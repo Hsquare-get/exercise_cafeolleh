@@ -9,7 +9,7 @@
 </head>
 <body class="my-login-page">
 
-	{% if error%}
+	{% if error %}
 		<script>
 			alert("비밀번호 일치하지 않습니다.");
 		</script>
@@ -25,7 +25,7 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Register</h4>
-							<form method="POST" action="{% url 'usersapp:register'%}">
+							<form method="POST" action="{% url 'usersapp:register'%}"><!-- /usersapp/register/ url을 POST방식으로 보내겠다 -->
 							 	 {% csrf_token %}
 								<div class="form-group">
 									<label for="name">Name</label>

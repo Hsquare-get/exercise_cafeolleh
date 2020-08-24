@@ -24,8 +24,8 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Login</h4>
-							<form method="POST" action="{% url 'usersapp:login' %}">
-								{% csrf_token %}
+							<form method="POST" action="{% url 'usersapp:login' %}"> <!--웹서버에게 /usersapp/login/ url을 POST 방식으로 보내겠다.-->
+								{% csrf_token %} <!--POST 방식일 경우 항상 csrf_token을 써준다(보안을 위해)-->
 								<div class="form-group">
 									<label for="email">E-Mail Address</label>
 									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
